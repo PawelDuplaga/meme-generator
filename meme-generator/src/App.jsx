@@ -9,7 +9,8 @@ function App() {
   return (
   <div className='main'>
     <Navbar
-    site_name = "SOMETHING"
+    site_name = "Meme generator"
+    project_name = "by Pawel Duplaga"
     />
     <Form/>
   </div>

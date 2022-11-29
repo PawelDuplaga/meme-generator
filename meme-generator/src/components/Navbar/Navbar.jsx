@@ -8,9 +8,7 @@ export default function Navbar(props) {
                 <img className="nav--logo" src = '../../../public/Troll Face.png' />
                 <p className="nav--site_name">{props.site_name}</p>
             </div>
-            <div>
-                <p className="nav--project_name">{props.project_name}</p>
-            </div>
+                  <p className="nav--project_name">{props.project_name}</p>          
         </nav>
     )
 }
