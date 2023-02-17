@@ -5,7 +5,7 @@ import memeData from '../../data/memeDatas'
 
 export default function Form () {
 
-
+    //state
     const[meme,setMeme] = React.useState({
         topText:"",
         bottomText:"",
@@ -24,7 +24,8 @@ export default function Form () {
         }))
     }
 
-
+    // fix performance 
+    // remember to do main content component
 
     return (
         <div>
