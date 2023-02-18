@@ -24,6 +24,14 @@ export default function Form () {
         }))
     }
 
+    function handleChange (event) {
+        const {name,value,type,checked} = event.target
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name] : type === checked ? checked : value
+        }))
+    }
+
     // fix performance 
     // remember to do main content component
 
@@ -33,11 +41,17 @@ export default function Form () {
                 <div className="form-container">
                     <input
                     type="text"
+                    name="topText"
+                    onChange={handleChange}
+                    value={meme.topText}
                     placeholder="Top text"
                     className="form--input"
                     />
                     <input
                     type="text"
+                    name="bottomText"
+                    onChange={handleChange}
+                    value={meme.bottomText}
                     placeholder="Bottom text"
                     className="form--input"
                     />
@@ -48,7 +62,11 @@ export default function Form () {
                     </button>
                 </div>
             </main>
-            <img className="meme-image" src = {meme.randomImg}/>
+            <div className="meme">
+                <img className="meme-image" src = {meme.randomImg}/>
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
         </div>
     )
 }
